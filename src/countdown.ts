@@ -1,4 +1,4 @@
-// Countdown timer for International Women's Day 2025
+// Countdown timer for International Women's Day 2026
 
 export interface TimeRemaining {
   days: number;
@@ -8,10 +8,10 @@ export interface TimeRemaining {
   total: number;
 }
 
-// Target date: March 8, 2025, 00:00:00 JST (UTC+9)
+// Target date: March 8, 2026, 00:00:00 JST (UTC+9)
 // JST is UTC+9, so we need to calculate the UTC time
-// March 8, 2025 00:00:00 JST = March 7, 2025 15:00:00 UTC
-const TARGET_DATE = new Date('2025-03-07T15:00:00Z');
+// March 8, 2026 00:00:00 JST = March 7, 2026 15:00:00 UTC
+const TARGET_DATE = new Date('2026-03-07T15:00:00Z');
 
 export function getTimeRemaining(): TimeRemaining {
   const now = new Date();
