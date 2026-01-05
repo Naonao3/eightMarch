@@ -57,6 +57,7 @@ body {
   font-family: var(--font-body);
   background: var(--gradient-main);
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   color: var(--text-light);
   line-height: 1.6;
@@ -65,6 +66,7 @@ body {
 #app {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Screen Transitions */
@@ -82,7 +84,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.8s ease, visibility 0.8s ease;
-  padding: var(--spacing-sm);
+  padding: 0.5rem;
   overflow-y: auto;
 }
 
@@ -134,9 +136,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 220px;
-  opacity: 0.25;
+  width: 120px;
+  height: 180px;
+  opacity: 0.2;
   z-index: 0;
 }
 
@@ -150,19 +152,19 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 100%;
+  padding: 0 0.5rem;
 }
 
 .teaser-title {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   font-weight: 700;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.25rem;
   background: linear-gradient(135deg, var(--white) 0%, var(--pink-light) 50%, var(--gold-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
   animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
@@ -172,11 +174,11 @@ body {
 }
 
 .teaser-subtitle {
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
   color: var(--pink-light);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0.75rem;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -185,9 +187,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-xs);
-  flex-wrap: wrap;
-  margin-bottom: var(--spacing-md);
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+  margin-bottom: 0.75rem;
 }
 
 .time-block {
@@ -196,35 +198,34 @@ body {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 0.6rem 1rem;
-  min-width: 70px;
+  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+  min-width: 52px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .time-value {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
   font-weight: 700;
   color: var(--white);
   line-height: 1;
-  text-shadow: 0 0 20px var(--pink-light);
 }
 
 .time-label {
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-size: 0.55rem;
   color: var(--pink-light);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: var(--spacing-xs);
+  letter-spacing: 0.5px;
+  margin-top: 0.15rem;
 }
 
 .time-separator {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.2rem, 4vw, 2rem);
   color: var(--pink-light);
   animation: pulse 1s ease-in-out infinite;
+  margin: 0 -0.1rem;
 }
 
 @keyframes pulse {
@@ -233,7 +234,7 @@ body {
 }
 
 .anticipation-message {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(0.75rem, 2vw, 1rem);
   color: var(--cream);
   font-style: italic;
   opacity: 0.9;
@@ -248,10 +249,10 @@ body {
 /* Sound Toggle Button */
 .sound-toggle {
   position: fixed;
-  bottom: var(--spacing-md);
-  right: var(--spacing-md);
-  width: 50px;
-  height: 50px;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -271,8 +272,8 @@ body {
 }
 
 .sound-toggle svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 /* ============================================
@@ -310,14 +311,14 @@ body {
   z-index: 2;
   text-align: center;
   max-width: 900px;
-  padding: var(--spacing-md);
+  padding: 0.5rem;
 }
 
 .celebration-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(1.3rem, 5vw, 3rem);
   font-weight: 700;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0.5rem;
   background: linear-gradient(135deg, var(--gold) 0%, var(--white) 50%, var(--pink-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -327,9 +328,9 @@ body {
 }
 
 .bouquet-container {
-  width: clamp(200px, 40vw, 350px);
-  height: clamp(250px, 50vw, 400px);
-  margin: 0 auto var(--spacing-md);
+  width: clamp(140px, 35vw, 280px);
+  height: clamp(180px, 45vw, 350px);
+  margin: 0 auto 0.5rem;
   opacity: 0;
   transform: scale(0.5);
 }
@@ -340,11 +341,11 @@ body {
 }
 
 .celebration-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   color: var(--cream);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 1rem;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -353,18 +354,18 @@ body {
 /* Message Button */
 .message-button {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 600;
   color: var(--white);
   background: linear-gradient(135deg, var(--pink-dark) 0%, var(--purple-main) 100%);
   border: none;
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  box-shadow: 0 10px 30px rgba(233, 30, 140, 0.4);
+  gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(233, 30, 140, 0.4);
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -372,7 +373,7 @@ body {
 
 .message-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(233, 30, 140, 0.5);
+  box-shadow: 0 12px 35px rgba(233, 30, 140, 0.5);
 }
 
 .message-button:active {
@@ -380,7 +381,7 @@ body {
 }
 
 .btn-icon {
-  font-size: 1.2em;
+  font-size: 1em;
   animation: twinkle 1.5s ease-in-out infinite;
 }
 
@@ -391,13 +392,13 @@ body {
 
 /* Message Display */
 .message-display {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-md) var(--spacing-lg);
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 700px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -411,30 +412,30 @@ body {
 
 #quote-text {
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
   font-style: italic;
   color: var(--white);
-  line-height: 1.8;
-  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 #quote-text::before {
   content: '"';
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--pink-light);
   opacity: 0.5;
 }
 
 #quote-text::after {
   content: '"';
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--pink-light);
   opacity: 0.5;
 }
 
 #quote-author {
   display: block;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
   color: var(--gold-light);
   font-weight: 500;
 }
@@ -447,134 +448,151 @@ body {
    Responsive Design
    ============================================ */
 
-/* Tablet */
-@media (max-width: 768px) {
-  .time-block {
-    min-width: 65px;
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .countdown-timer {
-    gap: 0.3rem;
-  }
-
-  .message-button {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .message-display {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  :root {
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-sm: 0.75rem;
+/* Larger screens */
+@media (min-width: 768px) and (min-height: 600px) {
+  .screen {
+    padding: 1rem;
   }
 
   .teaser-title {
-    font-size: 1.4rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
   }
 
   .teaser-subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .countdown-timer {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .time-block {
-    min-width: 50px;
-    padding: 0.4rem 0.5rem;
+    padding: 0.8rem 1.2rem;
+    min-width: 80px;
+    border-radius: 12px;
   }
 
   .time-value {
-    font-size: 1.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
   }
 
   .time-label {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
   }
 
   .time-separator {
-    font-size: 1.5rem;
-    margin: 0 -0.1rem;
-  }
-
-  .bud-container {
-    width: 120px;
-    height: 180px;
-  }
-
-  .bouquet-container {
-    width: 160px;
-    height: 200px;
-  }
-
-  .sound-toggle {
-    width: 40px;
-    height: 40px;
-    bottom: 0.5rem;
-    right: 0.5rem;
-  }
-
-  .message-button {
-    flex-direction: column;
-    gap: 0.3rem;
-    padding: 0.75rem 1.25rem;
-    font-size: 0.9rem;
-  }
-
-  .btn-icon {
-    display: none;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0.2rem;
   }
 
   .anticipation-message {
-    font-size: 0.9rem;
-  }
-}
-
-/* Small height screens */
-@media (max-height: 700px) {
-  .teaser-title {
-    font-size: clamp(1.3rem, 3.5vw, 2rem);
-    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
   }
 
-  .teaser-subtitle {
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
+  .sound-toggle {
+    width: 50px;
+    height: 50px;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 
-  .countdown-timer {
-    margin-bottom: 0.75rem;
-  }
-
-  .time-block {
-    padding: 0.4rem 0.6rem;
-    min-width: 55px;
-  }
-
-  .time-value {
-    font-size: clamp(1.4rem, 4vw, 2rem);
+  .sound-toggle svg {
+    width: 24px;
+    height: 24px;
   }
 
   .bud-container {
-    width: 100px;
-    height: 150px;
-    opacity: 0.2;
+    width: 180px;
+    height: 270px;
+  }
+
+  .celebration-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .bouquet-container {
+    width: clamp(220px, 35vw, 320px);
+    height: clamp(280px, 45vw, 400px);
+    margin-bottom: 1rem;
+  }
+
+  .celebration-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .message-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+
+  .message-display {
+    padding: 1.5rem 2rem;
+    max-width: 700px;
+  }
+
+  #quote-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* Very small screens (iPhone SE, small Android) */
+@media (max-height: 600px) {
+  .teaser-title {
+    font-size: 1.1rem;
+  }
+
+  .teaser-subtitle {
+    font-size: 0.65rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .countdown-timer {
+    margin-bottom: 0.5rem;
+  }
+
+  .time-block {
+    padding: 0.3rem 0.4rem;
+    min-width: 45px;
+    border-radius: 6px;
+  }
+
+  .time-value {
+    font-size: 1.1rem;
+  }
+
+  .time-label {
+    font-size: 0.5rem;
+  }
+
+  .time-separator {
+    font-size: 1rem;
+  }
+
+  .anticipation-message {
+    font-size: 0.7rem;
+  }
+
+  .bud-container {
+    width: 80px;
+    height: 120px;
+    opacity: 0.15;
   }
 }
 
 /* Landscape Mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-  .screen {
-    padding: 0.5rem;
+@media (max-height: 450px) and (orientation: landscape) {
+  .countdown-content {
+    transform: scale(0.75);
   }
 
-  .countdown-content, .celebration-content {
-    transform: scale(0.8);
+  .celebration-content {
+    transform: scale(0.7);
   }
 
   .bud-container {
